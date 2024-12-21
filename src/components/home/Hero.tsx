@@ -1,8 +1,8 @@
 import Image from "next/image";
 import heroImage from "@/assets/images/hero.webp";
-import { Button } from "../ui/button";
 import Trust from "./Trust";
 import { Bricolage_Grotesque } from "next/font/google";
+import CTA from "../CTA";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -23,7 +23,7 @@ export default function Hero() {
             Refund your Call of Dragons purchases back to your bank account with our refund services.
           </p>
           
-          <Button className="w-fit mx-auto md:mx-0 mb-8">Refund Now</Button>
+          <CTA />
           <Trust />
         </div>
 
