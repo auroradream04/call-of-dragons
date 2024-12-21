@@ -1,3 +1,5 @@
+import SocialIcons from './SocialIcons';
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-16">
@@ -8,38 +10,33 @@ export default function Footer() {
             <p className="text-gray-400 mb-6">
               An epic adventure awaits in this magical realm where legends are born and destinies are forged.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
-                <span className="sr-only">Facebook</span>
-                {/* Add social icons here */}
-              </a>
-            </div>
+            <SocialIcons />
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-4 text-gray-400">
-              <li><a href="#" className="hover:text-white">Home</a></li>
-              <li><a href="#" className="hover:text-white">Characters</a></li>
-              <li><a href="#" className="hover:text-white">Features</a></li>
-              <li><a href="#" className="hover:text-white">About</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Characters</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">About</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-6">Community</h4>
             <ul className="space-y-4 text-gray-400">
-              <li><a href="#" className="hover:text-white">Discord</a></li>
-              <li><a href="#" className="hover:text-white">Twitter</a></li>
-              <li><a href="#" className="hover:text-white">Instagram</a></li>
-              <li><a href="#" className="hover:text-white">YouTube</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Discord</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">YouTube</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-6">Support</h4>
             <ul className="space-y-4 text-gray-400">
-              <li><a href="#" className="hover:text-white">Help Center</a></li>
-              <li><a href="#" className="hover:text-white">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white">Contact Us</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>
         </div>

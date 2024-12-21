@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="py-4">
+    <header className="py-8 h-20 mb-12">
       <div className="container mx-auto px-6 flex justify-between items-center">
         <h1 className="text-2xl font-bold">ACME</h1>
         <nav>
