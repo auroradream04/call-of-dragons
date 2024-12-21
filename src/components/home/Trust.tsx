@@ -16,7 +16,7 @@ export default function Trust() {
         {users.map(({ src, alt }) => (
           <div
             key={alt}
-            className="w-8 h-8 rounded-full border-2 border-white overflow-hidden"
+            className="w-9 h-9 rounded-full border-2 border-white overflow-hidden"
           >
             <Image
               src={src}
@@ -35,7 +35,7 @@ export default function Trust() {
           ))}
         </div>
         <p className="text-sm text-gray-500">
-          <span className="font-semibold">500+</span> customers trust us
+          <span className="font-semibold">500+</span> happy customers
         </p>
       </div>
     </div>

@@ -2,6 +2,12 @@ import Image from "next/image";
 import heroImage from "@/assets/images/hero.webp";
 import { Button } from "../ui/button";
 import Trust from "./Trust";
+import { Bricolage_Grotesque } from "next/font/google";
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 export default function Hero() {
   return (
@@ -9,12 +15,15 @@ export default function Hero() {
 
       {/* Left */}
       <div className="flex flex-col justify-center">
-        <h1 className="text-4xl lg:text-7xl font-bold mb-4">Call of Dragons</h1>
-        <p className="text-lg text-gray-500 max-w-lg mb-12">
-          An epic adventure awaits in this magical realm where legends are born and destinies are forged.
+        <h1 className={`${bricolage.className} text-4xl lg:text-7xl font-extrabold mb-8 tracking-tighter`}>
+            Quitting? Get 
+            <span className="text-primary block mt-4">your <span className="text-white bg-red-900 px-4">money back!</span></span>
+        </h1>
+        <p className="text-lg text-gray-500 max-w-lg mb-16">
+          Refund your Call of Dragons purchases back to your bank account with our refund services.
         </p>
         
-        <Button className="w-fit mb-4">Play Now</Button>
+        <Button className="w-fit mb-8">Play Now</Button>
         <Trust />
       </div>
 
