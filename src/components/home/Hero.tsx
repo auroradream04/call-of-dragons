@@ -14,21 +14,21 @@ export default function Hero() {
     <>
       <div className="w-full grid grid-cols-1 md:grid-cols-2">
         {/* Left */}
-        <div className="flex flex-col justify-center">
-          <h1 className={`${bricolage.className} text-4xl lg:text-7xl font-extrabold mb-8 tracking-tighter`}>
+        <div className="flex flex-col justify-center text-center md:text-left mb-12 md:mb-0">
+          <h1 className={`${bricolage.className} text-5xl md:text-5xl lg:text-7xl font-extrabold mb-8 tracking-tighter`}>
               Quitting? Get 
               <span className="text-primary block mt-4">your <span className="text-white bg-accent px-4">money back!</span></span>
           </h1>
-          <p className="text-lg text-gray-500 max-w-lg mb-16">
+          <p className="text-sm lg:text-lg text-gray-500 max-w-lg mb-8 md:mb-16 mx-auto lg:mx-0">
             Refund your Call of Dragons purchases back to your bank account with our refund services.
           </p>
           
-          <Button className="w-fit mb-8">Play Now</Button>
+          <Button className="w-fit mx-auto md:mx-0 mb-8">Refund Now</Button>
           <Trust />
         </div>
 
         {/* Right */}
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col">
           <Image src={heroImage} alt="Hero" className="w-full h-auto"/>
         </div>
       </div>

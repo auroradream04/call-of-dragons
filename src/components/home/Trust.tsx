@@ -11,7 +11,7 @@ const users = [
 
 export default function Trust() {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center justify-center md:justify-start gap-4">
       <div className="flex -space-x-2">
         {users.map(({ src, alt }) => (
           <div
