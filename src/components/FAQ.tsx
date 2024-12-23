@@ -17,7 +17,7 @@ function FAQItem({ question, answer }: FAQItemType) {
   return (
     <div 
       onClick={() => setIsOpen(!isOpen)}
-      className="cursor-pointer p-6 bg-white hover:bg-gray-50 rounded-lg border border-gray-100 transition-all"
+      className="cursor-pointer py-4 border-b border-gray-100 transition-all hover:bg-gray-50/50"
     >
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-medium text-gray-900">
@@ -54,9 +54,9 @@ export default function FAQ({ title, description, items }: FAQProps) {
         )}>
           {title}
         </h2>
-        <p className="text-gray-500 text-center mb-12">{description}</p>
+        <p className="text-gray-500 text-center mb-8">{description}</p>
 
-        <div className="space-y-4">
+        <div className="divide-y divide-gray-100">
           {items.map((item, index) => (
             <FAQItem key={index} {...item} />
           ))}
