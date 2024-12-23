@@ -1,41 +1,41 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
-
-const users = [
-  { src: "/avatars/avatar1.png", alt: "Avatar 1" },
-  { src: "/avatars/avatar2.webp", alt: "Avatar 2" },
-  { src: "/avatars/avatar3.webp", alt: "Avatar 3" },
-  { src: "/avatars/avatar4.png", alt: "Avatar 4" },
-  { src: "/avatars/avatar5.jpeg", alt: "Avatar 5" },
-];
+import { siteConfig } from "@/config/site";
 
 export default function Trust() {
+  const { trustSection } = siteConfig;
+  
   return (
-    <div className="flex items-center justify-center md:justify-start gap-4">
-      <div className="flex -space-x-2">
-        {users.map(({ src, alt }) => (
-          <div
-            key={alt}
-            className="w-9 h-9 rounded-full border-2 border-white overflow-hidden"
-          >
-            <Image
-              src={src}
-              alt={alt}
-              width={32}
-              height={32}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
-      <div className="flex flex-col">
-        <div className="flex items-center gap-1">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+    <div className="flex flex-col md:flex-row items-center gap-8 justify-center md:justify-start">
+      <div className="flex items-center">
+        <div className="flex -space-x-4">
+          {trustSection.avatars.map((avatar, index) => (
+            <div
+              key={index}
+              className="w-10 h-10 relative rounded-full ring-4 ring-white"
+            >
+              <Image
+                src={avatar.src}
+                alt={avatar.alt}
+                fill
+                className="rounded-full object-cover"
+              />
+            </div>
           ))}
         </div>
         <p className="text-sm text-gray-500">
-          <span className="font-semibold">500+</span> happy customers
+          <span className="font-semibold">{trustSection.customerCount}+</span> happy customers
+        </p>
+      </div>
+      
+      <div className="flex items-center gap-2">
+        <div className="flex">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+          ))}
+        </div>
+        <p className="text-sm text-gray-500">
+          <span className="font-semibold">{trustSection.rating}</span> rating
         </p>
       </div>
     </div>

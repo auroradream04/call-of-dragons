@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { FaDiscord } from "react-icons/fa6";
+import { siteConfig } from "@/config/site";
 
 interface TestimonialCardProps {
   name: string;
@@ -31,33 +32,19 @@ function TestimonialCard({ name, description, avatar }: TestimonialCardProps) {
   );
 }
 
-export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      description: "All base UI elements are made using Nested Symbols and shared styles that are logically connected. Gorgeous, high-quality video sharing on desktop, mobile, tablet.",
-      avatar: "/avatars/avatar1.png"
-    },
-    {
-      name: "Michael Chen",
-      description: "All base UI elements are made using Nested Symbols and shared styles that are logically connected. Gorgeous, high-quality video sharing on desktop, mobile, tablet.",
-      avatar: "/avatars/avatar2.webp"
-    },
-    {
-      name: "Emma Thompson",
-      description: "All base UI elements are made using Nested Symbols and shared styles that are logically connected. Gorgeous, high-quality video sharing on desktop, mobile, tablet.",
-      avatar: "/avatars/avatar3.webp"
-    }
-  ];
+interface TestimonialsProps {
+  testimonials: typeof siteConfig.testimonials;
+}
 
+export default function Testimonials({ testimonials }: TestimonialsProps) {
   return (
-    <section className="w-full py-16">
+    <section className="w-full">
       <div className="flex flex-col items-center mb-16">
         <h2 className={cn(
           "font-bricolage",
           "text-4xl md:text-5xl font-bold tracking-tight text-center mb-4"
         )}>
-          More Social Proof
+          Testimonials
         </h2>
         <div className="w-20 h-1 bg-primary rounded"></div>
       </div>

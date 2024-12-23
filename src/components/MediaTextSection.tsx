@@ -37,8 +37,9 @@ function MediaContainer({
     <Image
       src={mediaUrl}
       alt={mediaAlt}
-      fill
-      className="object-contain"
+      width={900}
+      height={850}
+      className="object-cover"
       priority
     />
   );
@@ -72,14 +73,14 @@ export default function MediaTextSection({
       </div>
 
       {/* Text Content */}
-      <div className="flex flex-col space-y-6 w-full">
+      <div className="flex flex-col space-y-6 w-full ">
         <h2 className={cn(
           "font-bricolage",
           "text-4xl md:text-5xl font-bold tracking-tight"
         )}>
           {title}
         </h2>
-        <p className="text-gray-500 leading-relaxed text-lg md:pr-8">
+        <p className="text-gray-500 leading-relaxed text-lg">
           {description}
         </p>
       </div>
