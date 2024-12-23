@@ -25,7 +25,7 @@ const stats = [
 
 export default function StatsCounter() {
     return (
-        <section className="w-full py-12 border-gray-200 max-w-6xl mx-auto">
+        <section className="w-full pt-12 border-gray-200 max-w-6xl mx-auto">
             <div className="container mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     {stats.map((stat, index) => (

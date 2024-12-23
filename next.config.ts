@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: [], // Add any external image domains if needed
+    domains: [], // Add your image domains here if using external images
   },
 };
 
