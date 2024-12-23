@@ -2,6 +2,7 @@ import Hero from "@/components/home/Hero";
 import StatsCounter from "@/components/StatsCounter";
 import MediaTextSection from "@/components/MediaTextSection";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import { siteConfig } from "@/config/site";
 
 export default function Home() {
@@ -35,6 +36,9 @@ export default function Home() {
             reversed={index % 2 !== 0}
           />
         ))}
+
+        {/* FAQ section */}
+        <FAQ {...siteConfig.faq} />
       </div>
     </main>
   );

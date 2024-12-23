@@ -54,6 +54,11 @@ export interface SocialConfig {
   youtube: string;
 }
 
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 export const siteConfig = {
   name: "Call of Dragons",
   description: "Refund your Call of Dragons purchases back to your bank account with our refund services.",
@@ -214,7 +219,34 @@ export const siteConfig = {
     siteUrl: "https://callofdragons.com",
     twitterHandle: "@callofdragons",
     ogImage: "/og-image.jpg",
-  }
+  },
+
+  faq: {
+    title: "Frequently Asked Questions",
+    description: "Find answers to common questions about our services.",
+    items: [
+      {
+        question: "System requirements",
+        answer: "Our service works on any modern web browser. No special software or hardware requirements needed."
+      },
+      {
+        question: "Where can I learn more about how to get started?",
+        answer: "You can start by contacting our support team. We'll guide you through the entire refund process step by step."
+      },
+      {
+        question: "Is Acme available for Linux?",
+        answer: "Yes, our service is platform-independent and works on all operating systems including Linux, Windows, and macOS."
+      },
+      {
+        question: "What about a version for iOS?",
+        answer: "Our service is web-based and works perfectly on iOS through any modern browser. No app installation required."
+      },
+      {
+        question: "Will I automatically be charged when my trial ends?",
+        answer: "No, we don't automatically charge you. You'll need to explicitly upgrade to continue using our services after the trial period."
+      }
+    ] satisfies FAQItem[]
+  },
 } as const;
 
 export type SiteConfig = typeof siteConfig; 
