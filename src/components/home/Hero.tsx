@@ -1,13 +1,7 @@
 import Image from "next/image";
 import heroImage from "@/assets/images/hero.webp";
 import Trust from "./Trust";
-import { Bricolage_Grotesque } from "next/font/google";
 import CTA from "../CTA";
-
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
 
 export default function Hero() {
   return (
@@ -15,7 +9,7 @@ export default function Hero() {
       <div className="w-full grid grid-cols-1 md:grid-cols-2">
         {/* Left */}
         <div className="flex flex-col justify-center text-center md:text-left mb-12 md:mb-0">
-          <h1 className={`${bricolage.className} text-5xl md:text-5xl lg:text-7xl font-extrabold mb-8 tracking-tighter`}>
+          <h1 className="font-bricolage text-5xl md:text-5xl lg:text-7xl font-extrabold mb-8 tracking-tighter">
               Quitting? Get 
               <span className="text-primary block mt-4">your <span className="text-white bg-accent px-4">money back!</span></span>
           </h1>

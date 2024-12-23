@@ -1,11 +1,5 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { Bricolage_Grotesque } from "next/font/google";
-
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 interface ImageTextSectionProps {
   title: string;
@@ -46,7 +40,7 @@ export default function ImageTextSection({
       {/* Text Content */}
       <div className="flex flex-col space-y-6 w-full">
         <h2 className={cn(
-          bricolage.className,
+          "font-bricolage",
           "text-4xl md:text-5xl font-bold tracking-tight"
         )}>
           {title}

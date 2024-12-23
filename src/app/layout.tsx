@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { bricolage, geist } from "@/lib/fonts";
 import "./globals.css";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
-
-const geistSans = Geist({
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.className} antialiased`}>
+    <html lang="en" className={`${bricolage.variable} ${geist.variable}`}>
+      <body className={`${geist.className} antialiased`}>
         <Header />
         {children}
         <Footer />
