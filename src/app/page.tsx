@@ -39,11 +39,12 @@ export default function Home() {
         ))}
       </div>
 
-      {/* FAQ section */}
-      <FAQ {...siteConfig.faq} />
-
       {/* Final CTA */}
       <LastCTA />
+
+      {/* FAQ section */}
+      <FAQ {...siteConfig.faq} />
+      
     </main>
   );
 }
