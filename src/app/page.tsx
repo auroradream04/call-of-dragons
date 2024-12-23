@@ -1,6 +1,7 @@
 import Hero from "@/components/home/Hero";
 import StatsCounter from "@/components/StatsCounter";
 import ImageTextSection from "@/components/ImageTextSection";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
           imageAlt="Strategic gameplay screenshot"
           reversed={true}
         />
+
+        <Testimonials />
+        
         <ImageTextSection
           title="Join the Adventure"
           description="Embark on a journey of epic proportions. With a vast world to explore, a rich history to uncover, and a community of players to forge alliances with, every decision you make will shape the destiny of your kingdom. Are you ready to rise to the challenge?"
